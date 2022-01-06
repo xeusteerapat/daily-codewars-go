@@ -73,3 +73,25 @@ func main() {
 	ans := MxDifLg(s1, s2)
 	fmt.Println(ans)
 }
+
+// Interesting solution
+/*
+import "math"
+
+func AbsDiff(a, b int) int {
+  return int(math.Abs(float64(a) - float64(b)))
+}
+
+func MxDifLg(a, b []string) int {
+  max, cur := -1, 0
+  for _, x := range a {
+    for _, y := range b {
+      cur = AbsDiff(len(x), len(y))
+      if cur > max {
+        max = cur
+      }
+    }
+  }
+  return max
+}
+*/
